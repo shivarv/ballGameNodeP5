@@ -23,6 +23,7 @@ let input, button, playerIdMessage, selectList, choosePlayerTypeMessage;
 
 let currentPlayerType;
 let playerId;
+let opponentId;
 
 let elementsToRemove = [];
 function setup() {
@@ -66,7 +67,7 @@ function addElementToRemove(ele) {
 
 function selectPlayerType() {
     console.log('selectPlayerType '+selectList.value());
-  currentPlayerType = selectList.value();
+    currentPlayerType = selectList.value();
 }
 
 function gameStart() {

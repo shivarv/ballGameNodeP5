@@ -29,9 +29,10 @@ var io = require('socket.io')(server);
 io.sockets.on('connection',
   // We are given a websocket object in our function
   function (socket) {
-  
+    
     console.log("We have a new client: " + socket.id);
-  
+    //socket.broadcast.emit('playerConnected', data);
+
     // When this user emits, client side: socket.emit('otherevent',some data);
     socket.on('playershoot',
       function(data) {
